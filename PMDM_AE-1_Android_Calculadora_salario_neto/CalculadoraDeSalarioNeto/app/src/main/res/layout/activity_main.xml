@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_100"
+    tools:context=".MainActivity">
+
+    <!-- Title -->
+
+
+    <!--
+        UI Inputs:
+            ▸ Salario bruto anual.
+            ▸ Numero de pagas.
+            ▸ Edad.
+            ▸ Grupo profesional.
+            ▸ Grado de discapacidad.
+            ▸ Estado civil.
+            ▸ Número de hijos.
+    -->
+
+    <!-- Numero de pagas: Choose 12 o 14 -->
+
+    <!-- container for radio buttons -->
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/gray_100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        tools:layout_editor_absoluteY="-58dp" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="330dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/title"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <EditText
+        android:id="@+id/etGrossSalary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:hint="@string/gross_salary"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvNumberOfPayments"
+        android:layout_width="125dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/number_of_payments"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/etGrossSalary" />
+
+    <RadioGroup
+        android:id="@+id/rgNumberOfPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumberOfPayments">
+
+        <RadioButton
+            android:id="@+id/rbTwelvePayments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/twelve_payments"
+            android:value="12"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="173dp" />
+
+        <RadioButton
+            android:value="14"
+            android:id="@+id/rbFourteenPayments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fourteen_payments" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/age"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/rgNumberOfPayments" />
+
+
+    <!-- Grupo profesional -->
+
+    <!--
+                - Ingenieros y Licenciados
+                - Ingenieros Técnicos, Peritos y Ayudantes Titulados
+                - Jefes Administrativos y de Taller
+                - Ayudantes no Titulados
+                - Oficiales Administrativos
+                - Subalternos
+                - Auxiliares Administrativos
+                - Oficiales de primera y segunda
+                - Oficiales de tercera y Especialistas
+                - Peones
+                - Trabajadores menores de dieciocho años, cualquiera
+            -->
+
+    <!-- list of professional groups -->
+
+    <TextView
+        android:id="@+id/tvProfessionalGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="20dp"
+        android:text="Grupo profesional"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/etAge" />
+
+    <!-- Grado de discapacidad entre el 33% y el 65% -->
+
+    <!-- Grado de discapacidad: checkbox -->
+
+    <Spinner
+        android:id="@+id/spProfessionalGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="107dp"
+        android:layout_marginEnd="104dp"
+        android:entries="@array/professional_groups"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/tvProfessionalGroup" />
+
+    <CheckBox
+        android:id="@+id/cbDisabilityGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Grado de discapacidad entre el 33% y el 65%"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spProfessionalGroup"
+        tools:layout_editor_absoluteY="438dp" />
+
+    <TextView
+        android:id="@+id/marital_status_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Estado civil"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/cbDisabilityGrade" />
+
+    <Spinner
+        android:id="@+id/spCivilStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="31dp"
+        android:entries="@array/marital_statuses"
+        android:prompt="@string/marital_status"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/marital_status_title" />
+
+    <EditText
+        android:id="@+id/etNumberOfChildren"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/number_of_children"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/spCivilStatus" />
+
+    <Button
+        android:id="@+id/btnCalculateNetSalary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/calculate_net_salary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNumberOfChildren" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

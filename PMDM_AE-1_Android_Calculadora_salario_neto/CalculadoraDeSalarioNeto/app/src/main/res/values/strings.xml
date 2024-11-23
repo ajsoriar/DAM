@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">CalculadoraDeSalarioNeto</string>
+    <string name="title">Calculadora de salario neto</string>
+    <string name="gross_salary">Salario bruto anual</string>
+    <string name="number_of_payments">Número de pagas</string>
+
+    <!--
+    @string/twelve_payments
+    @string/fourteen_payments
+    -->
+
+    <string name="twelve_payments">12 pagas</string>
+    <string name="fourteen_payments">14 pagas</string>
+
+    <string name="age">Edad</string>
+    <string name="professional_group">Grupo profesional</string>
+    <string name="disability_grade">Grado de discapacidad</string>
+    <string name="marital_status">Estado civil</string>
+    <string name="civil_status">Estado civil</string>
+    <string name="number_of_children">Número de hijos</string>
+    <string name="calculate_net_salary">Calcular salario neto</string>
+    <string name="calculate">Calcular</string>
+    <string name="net_salary">Salario neto</string>
+
+    <!--
+    <string name="error_gross_salary">Introduce un salario bruto anual válido</string>
+    <string name="error_number_of_payments">Introduce un número de pagas válido</string>
+    <string name="error_age">Introduce una edad válida</string>
+    <string name="error_professional_group">Introduce un grupo profesional válido</string>
+    <string name="error_disability_grade">Introduce un grado de discapacidad válido</string>
+    <string name="error_civil_status">Introduce un estado civil válido</string>
+    <string name="error_number_of_children">Introduce un número de hijos válido</string>
+    <string name="error_calculate">Error al calcular el salario neto</string>
+    <string name="error_calculate_message">Por favor, revisa los datos introducidos</string>
+    <string name="error_calculate_title">Error al calcular</string>
+    <string name="error_calculate_button">Aceptar</string>
+    <string name="error_calculate_toast">Error al calcular el salario neto</string>
+    <string name="error_calculate_toast_message">Por favor, revisa los datos introducidos</string>
+    <string name="error_calculate_toast_duration">Toast.LENGTH_SHORT</string>
+    <string name="error_calculate_toast_gravity">Gravity.CENTER</string>
+    <string name="error_calculate_toast_x_offset">0</string>
+    <string name="error_calculate_toast_y_offset">0</string>
+    -->
+
+</resources>

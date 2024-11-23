@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="marital_statuses">
+        <item>Soltero</item>
+        <item>Casado</item>
+        <item>Otros</item>
+    </string-array>
+
+    <string-array name="professional_groups">
+        <item>Ingenieros y Licenciados</item>
+        <item>Ingenieros Técnicos, Peritos y Ayudantes Titulados</item>
+        <item>Jefes Administrativos y de Taller</item>
+        <item>Ayudantes no Titulados</item>
+        <item>Oficiales Administrativos</item>
+        <item>Subalternos</item>
+        <item>Auxiliares Administrativos</item>
+        <item>Oficiales de primera y segunda</item>
+        <item>Oficiales de tercera y Especialistas</item>
+        <item>Peones</item>
+        <item>Trabajadores menores de dieciocho años, cualquiera</item>
+    </string-array>
+
+</resources>
