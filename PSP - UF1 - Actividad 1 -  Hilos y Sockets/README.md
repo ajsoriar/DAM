@@ -1,7 +1,5 @@
 # Instructions to run the Client-Server Library system
 
-![Library exercise](./circe-library.png?raw=true 'Library exercise')
-
 This system is composed of four classes:
 - **Book**: Represents the data of a book.
 - **LibraryServer**: Acts as a server to handle book queries.
